@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Torsports</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            /* margin-bottom: 20px; */
+        }
+
+        /* Logo styles */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+
+        }
+
+        /* Founder styles */
+        .founder {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* Services section styles */
+        .services {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            width: 45%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .service:hover {
+            background-color: #f0f0f0;
+        }
+
+        .service h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Torsports</div>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <p>Welcome to Torsports, where people come to watch sports and be entertained.</p>
+
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Sports Events Management</h3>
+                <p>We organize and manage sports tournaments, leagues, and competitions.</p>
+            </div>
+            <div class="service">
+                <h3>Facility Rental</h3>
+                <p>Rent our sports facilities for training, events, and matches.</p>
+            </div>
+            <div class="service">
+                <h3>Sports Coaching</h3>
+                <p>Get personalized coaching from experienced sports trainers and coaches.</p>
+            </div>
+            <div class="service">
+                <h3>Fitness Classes</h3>
+                <p>Join our fitness classes tailored for athletes and sports enthusiasts.</p>
+            </div>
+            <div class="service">
+                <h3>Sports Equipment Sales</h3>
+                <p>Shop for high-quality sports equipment and gear from our store.</p>
+            </div>
+            <div class="service">
+                <h3>Live Sports Streaming</h3>
+                <p>Watch live sports events and matches online through our streaming platform.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Torsports. All rights reserved.
+    </footer>
+    <!-- Show more details about each service -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const serviceItems = document.querySelectorAll('.service');
+        serviceItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const details = item.querySelector('.details');
+                details.classList.toggle('show');
+            });
+        });
+    });
+</script>
+
+<!-- Filtering services based on categories -->
+<script>
+    function filterServices(category) {
+        const serviceItems = document.querySelectorAll('.service');
+        serviceItems.forEach(item => {
+            if (category === 'all' || item.dataset.category === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

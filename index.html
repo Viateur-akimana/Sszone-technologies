@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Torsports</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="content">
+        <h2>Welcome to Our Entertainment Website</h2>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="./sport.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./sport1.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./sport2.jpeg" style="width:100%">
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">❮</button>
+            <button class="next" onclick="plusSlides(1)">❯</button>
+        </div>
+
+        <form id="contactForm">
+            <h2>Contact Us</h2>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="text" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 Simple Website. All rights reserved.
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Torsports</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+           
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .founder {
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .services {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            width: 45%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Torsports</div>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>About Torsports</h2>
+        <p>Welcome to Torsports, where people come to watch sports and be entertained.</p>
+        
+        <div class="founder">
+            <p>Founded by Viateur, CEO of Torsports</p>
+        </div>
+
+        <div class="services">
+            <div class="service">
+                <h3>Sports Events</h3>
+                <p>Experience thrilling sports tournaments and events.</p>
+            </div>
+            <div class="service">
+                <h3>Entertainment Shows</h3>
+                <p>Enjoy live concerts, comedy shows, and more.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Torsports. All rights reserved.
+    </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const panel = item.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const foundedYear = 2020; 
+        const currentYear = new Date().getFullYear();
+        const years = document.getElementById('years');
+        years.textContent = currentYear - foundedYear;
+    });
+</script>
+
+</body>
+</html>
